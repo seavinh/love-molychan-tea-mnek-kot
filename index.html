@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>question</title>
+<link rel="stylesheet" href="love.css">
+<style type="text/css">
+
+p {
+    padding: 5px 5px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+   color:
+   #F08080;
+   text-align:left;
+   background:#DAF7A6;
+   font-size:45px;
+   border-style:inset;
+   border-color: pink;
+    border-radius: 5px;
+    font-family: Khmer OS Muol Light;
+    box-shadow: 5px 5px 5px gray;
+}
+body{
+    background-color: pink;
+}
+button{
+ color:yellow;
+ background:purple;
+ font-size:30px;
+ text-align:center;
+ flex-wrap: nowrap;
+ border-style:ridge;
+ border-radius: 5px;
+ box-shadow: 3px 3px 3px rgb(107, 106, 107);
+padding: 5px 5px;
+}
+button:hover{
+    background-color: pink;
+    color: blueviolet;
+}
+.result{
+    width: 80%;
+    height: 500px;
+    background-image: url('https://pbs.twimg.com/media/FMHiDUdWUAY1soU.jpg:large');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 10px;
+    
+}
+
+</style>
+
+</head>
+<body>
+<div class="wrapper">
+ <div class="container">
+    <div class="love"> <p id="question"> ស្រឡាញ់MOLYCHANតែម្នាក់គត់🫶😍?</p></div>
+     <button class="btn" id="yes"> ជឿហើយ😘! </button>&nbsp;&nbsp;
+     <button class="btn" id="No"> អត់ជឿ😒 </button> 
+  </div>
+ </div>
+<div class="result">
+    
+</div>
+
+
+
+</body>
+<script>
+    const result=document.querySelector('.result');
+    result.style.display="none";
+     const noBtn = document.getElementById('No');
+     const yesBtn = document.getElementById('yes');
+     const ques = document.getElementById('question');
+     noBtn. addEventListener("click" ,()=>{
+          let rand =Math.floor(Math.random() *(300-40) + 3);
+          let rand2 = Math.floor( Math.random ()* (-50 - 10) + 4);
+          noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+          
+     
+     })
+ yesBtn.addEventListener("click", ()=>{
+ ques.innerHTML = " គួរអោយស្រឡាញ់ម៉ងហាហ 😘<3"
+ result.style.display="block";
+ 
+ })
+</script>
+</html>
